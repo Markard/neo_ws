@@ -1,0 +1,8 @@
+---
+
+services:
+
+    neo.report_fastest.controller:
+        class: 'NeoBundle\Controller\ReportFastest\Controller'
+        arguments:
+            - '@neo.repository.neo'

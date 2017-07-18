@@ -1,0 +1,7 @@
+---
+
+imports:
+    neo_bundle:
+        resource: '@NeoBundle/Resources/config/services.yml'
+
+services:

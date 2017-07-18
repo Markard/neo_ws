@@ -1,0 +1,8 @@
+---
+
+services:
+
+    neo.report_best_year.controller:
+        class: 'NeoBundle\Controller\ReportBestYear\Controller'
+        arguments:
+            - '@neo.repository.neo'

@@ -1,0 +1,8 @@
+---
+
+services:
+
+    neo.report_best_month.controller:
+        class: 'NeoBundle\Controller\ReportBestMonth\Controller'
+        arguments:
+            - '@neo.repository.neo'

@@ -1,0 +1,21 @@
+---
+
+services:
+
+    command.synchronize.integration.api.neo_provider:
+        class: 'NeoBundle\Command\Synchronize\Integration\NeoWebService\ApiBasedNeoProvider'
+        arguments:
+            - '@command.synchronize.integration.api.client'
+
+    command.synchronize.integration.api.response_mapper:
+        class: 'NeoBundle\Command\Synchronize\Integration\NeoWebService\Api\ResponseMapper'
+
+    command.synchronize.integration.api.client:
+        class: 'NeoBundle\Command\Synchronize\Integration\NeoWebService\Api\GuzzleBasedClient'
+        arguments:
+            - '%api_nasa.host%'
+            - '%api_nasa.api_key%'
+            - '@command.synchronize.integration.api.response_mapper'
+
+    command.synchronize.mapper:
+        class: 'NeoBundle\Command\Synchronize\Mapper'

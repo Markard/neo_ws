@@ -1,0 +1,8 @@
+---
+
+services:
+
+    neo.report_hazardous.controller:
+        class: 'NeoBundle\Controller\ReportHazardous\Controller'
+        arguments:
+            - '@neo.repository.neo'

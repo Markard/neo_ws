@@ -1,0 +1,20 @@
+---
+
+imports:
+    - resource: 'synchronize_command.yml'
+    - resource: 'input.yml'
+    - resource: 'report_hazardous.yml'
+    - resource: 'report_fastest.yml'
+    - resource: 'report_best_year.yml'
+    - resource: 'report_best_month.yml'
+
+services:
+
+    neo.repository.neo:
+        class: 'NeoBundle\Entity\Repository\NeoRepository'
+        factory: ['@doctrine.orm.entity_manager', 'getRepository']
+        arguments:
+            - 'NeoBundle\Entity\Neo'
+
+    neo.controller.default:
+        class: 'NeoBundle\Controller\DefaultController'

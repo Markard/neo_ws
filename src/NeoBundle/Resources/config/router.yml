@@ -1,0 +1,29 @@
+---
+
+api.default:
+    type: rest
+    resource: 'neo.controller.default'
+
+api.report_hazardous_neo:
+    type: rest
+    prefix: '/neo/hazardous'
+    resource: 'neo.report_hazardous.controller'
+    name_prefix: 'neo_hazardous_'
+
+api.report_fastest_neo:
+    type: rest
+    prefix: '/neo/fastest'
+    resource: 'neo.report_fastest.controller'
+    name_prefix: 'neo_fastest_'
+
+api.report_best_year:
+    type: rest
+    prefix: '/neo/best-year'
+    resource: 'neo.report_best_year.controller'
+    name_prefix: 'neo_best_year_'
+
+api.report_best_month:
+    type: rest
+    prefix: '/neo/best-month'
+    resource: 'neo.report_best_month.controller'
+    name_prefix: 'neo_best_month_'

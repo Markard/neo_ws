@@ -1,0 +1,12 @@
+---
+
+services:
+
+    neo.input.hazardous_request_converter:
+        class: 'NeoBundle\Controller\Input\HazardousRequestConverter'
+        arguments:
+            - '@validator'
+        tags:
+            - name: 'request.param_converter'
+              priority: -1
+              converter: 'neo.input.hazardous_request_converter'
