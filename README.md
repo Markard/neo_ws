@@ -8,11 +8,6 @@
 ## Installation
 
 * Clone project
-
-```bash
-git clone git@github.com:Markard/neo_web_service.git
-```
-
 * Install related packages via composer:
  
 ```bash
